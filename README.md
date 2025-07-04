@@ -116,7 +116,7 @@ row4
 **echo test >> test3/4**
 
 Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе:
-**ps ax**
+**ps aux**
 
 Убейте процесс 666 в консоли (можно не убивать, а просто написать команду):
 **kill 666**
@@ -131,12 +131,11 @@ row4
 **curl "https://petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending&status=sold"**
 
 Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/:
-**curl -X 'POST' \
+curl -X 'POST' \
   'https://petstore.swagger.io/v2/user/createWithList' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -d '[
-  {
+  -d '[{
     "id": 57684,
     "username": "cat121",
     "firstName": "Katya",
@@ -145,9 +144,4 @@ row4
     "password": "string",
     "phone": "string",
     "userStatus": 0
-  }
-]'**
-      }
-    ],
-    "status": "sold"
-  }'
+  }]'
